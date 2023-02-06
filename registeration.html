@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regestiration</title>
+    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/registeration.css">
+</head>
+<body>
+    <!-- start nav section -->
+    <nav>
+        <div class="logo">
+            <a href="index.html">tasty</a>
+        </div>
+    </nav>
+    <!-- end nav section -->
+    <!-- start main section -->
+    <main>
+        <form method="post" class="signup">
+            <div class="form-header">
+                <h1>sign up</h1>
+            </div>
+            <div class="form-group">
+                <input type="text" name="fName" placeholder="Enter your first name:" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lName" placeholder="Enter your last name:" required>
+            </div>
+            <div class="form-group">
+                <input type="email" autocomplete="off" name="email"placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <p>
+                    Already a memeber? <a id="login" onclick="openLoginForm()">log in</a>
+                </p>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="sing up">
+            </div>
+        </form>
+        <form method="post" class="login">
+            <div class="form-header">
+                <h1>sign in</h1>
+            </div>
+            <div class="form-group">
+                <input type="email" autocomplete="off" name="email"placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+         
+            <div class="form-group">
+                <input type="submit" value="log in">
+            </div>
+            <div class="form-group">
+                <p>
+                    <a id="singup" onclick="openSingupForm()">sign up</a>
+                </p>
+            </div>
+        </form>
+    </main>
+     <!-- end main section -->
+    <script>
+        let openLoginForm=()=>{
+            document.querySelector(".login").style=" visibility: visible;";   
+            document.querySelector(".signup").style=" visibility: hidden;";   
+           }
+        let openSingupForm=()=>{
+            document.querySelector(".signup").style=" visibility: visible;";   
+            document.querySelector(".login").style=" visibility: hidden;";   
+           }
+    </script>
+</body>
+</html>
